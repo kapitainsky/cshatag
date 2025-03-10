@@ -14,8 +14,12 @@ import (
 	"github.com/pkg/xattr"
 )
 
-const xattrSha256 = "user.shatag.sha256"
-const xattrTs = "user.shatag.ts"
+//const xattrSha256 = "user.shatag.sha256"
+//const xattrTs = "user.shatag.ts"
+
+// #S makes xattr "sticky" on macOS
+const xattrSha256 = "user.shatag.sha256#S"
+const xattrTs = "user.shatag.ts#S"
 const zeroSha256 = "0000000000000000000000000000000000000000000000000000000000000000"
 
 type fileTimestamp struct {
