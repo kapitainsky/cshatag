@@ -73,7 +73,7 @@ func processArg(fn string) {
 }
 
 func main() {
-	const myname = "cshatag"
+	const myname = "kptsky_cshatag"
 
 	if GitVersion == "" {
 		GitVersion = "(version unknown)"
@@ -89,6 +89,8 @@ func main() {
 	flag.Usage = func() {
 		fmt.Fprintf(os.Stderr, "%s %s\n", myname, GitVersion)
 		fmt.Fprintf(os.Stderr, "Usage: %s [OPTIONS] FILE [FILE2 ...]\n", myname)
+    fmt.Fprintf(os.Stderr, "\nSource code https://github.com/rfjakob/cshatag\n")
+    fmt.Fprintf(os.Stderr, "kptsky added #S to tag names to make them macOS sticky.\n\n")
 		fmt.Fprintf(os.Stderr, "Options:\n")
 		flag.PrintDefaults()
 		os.Exit(1)
